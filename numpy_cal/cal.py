@@ -20,9 +20,9 @@ def divide(a, b):
         return "Error! Division by Zero"
 
 
-print("addition : ",add(3, 6))
-print("dividtion : ",divide(3, 2))
-print("multiply : ",multiply(5, 9))
+# print("addition : ",add(3, 6))
+# print("dividtion : ",divide(3, 2))
+# print("multiply : ",multiply(5, 9))
 
 # Step 3. Trignometric operations
 # Functions like sin, cos , tan
@@ -36,9 +36,9 @@ def cos(angle):
 def tan(angle):
     return np.tan(np.radians(angle))
 
-print(sin(90))
-print(tan(45))
-print(cos(90))
+# print(sin(90))
+# print(tan(45))
+# print(cos(90))
 
 # Step 4: Logarithm & Exponent¶
 # Functions for log, exponent, and power
@@ -53,9 +53,9 @@ def power(base, exp):
     return np.power(base, exp)
 
 
-print(log(8))
-print(exponent(0))
-print(power(2, 5))
+# print(log(8))
+# print(exponent(0))
+# print(power(2, 5))
 
 
 # Step 5: Matrix Operations
@@ -68,24 +68,24 @@ def matrix_multiply(matrix1, matrix2):
     return np.dot(matrix1, matrix2)
 
 def matrix_transpose(matrix1):
-    return np.transpose(matrix)
+    return np.transpose(matrix1)
 
-def matrix_determinent(matrix):
-    return np.linalg.det(matrix)
+def matrix_determinent(matrix1):
+    return np.linalg.det(matrix1)
     
-# simple matrix 3x3
-matrix = np.matrix([[1,2,3],
-                    [2,3,5],
-                    [2,6,4]])
+# # simple matrix 3x3
+# matrix = np.matrix([[1,2,3],
+#                     [2,3,5],
+#                     [2,6,4]])
 
-print(matrix_determinent(matrix))
-print(matrix_transpose(matrix))
+# print(matrix_determinent(matrix))
+# print(matrix_transpose(matrix))
 
-matrix2 = np.array([[2,3,4],
-                   [6,5,4],
-                   [3,7,9]])
+# matrix2 = np.array([[2,3,4],
+#                    [6,5,4],
+#                    [3,7,9]])
 
-print(matrix_multiply(matrix, matrix2))
+# print(matrix_multiply(matrix, matrix2))
 
 
 # Step 6: User Input and Menu for Calculator
@@ -127,7 +127,7 @@ while True:
             print("Invalid operator")
 
     elif choose == 2:
-        sign = input("Enter your sign value : ")
+        sign = input("Enter your (sin, cos, tan) value : ")
         angle = int(input("Enter your angle : "))
 
         if sign == 'sin':
@@ -140,7 +140,7 @@ while True:
             print("Invalid sign value")
 
     elif choose == 3:
-        var = input("Enter your log or exp or power : ")
+        var = input("choose one (log, exp, power) : ")
         val = int(input("Enter your value : "))
 
         if var == 'log':
@@ -174,4 +174,4 @@ while True:
         print("bye bye")
         break
     else:
-         print("enter your valid number okay bro..")
+         print("Enter your valid number okay bro..")
