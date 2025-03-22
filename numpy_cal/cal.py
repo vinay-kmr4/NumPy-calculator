@@ -39,3 +39,20 @@ def tan(angle):
 print(sin(90))
 print(tan(45))
 print(cos(90))
+
+# Step 4: Logarithm & Exponent¶
+# Functions for log, exponent, and power
+
+def log(value, base=10):
+    return np.log10(value) if base == 10 else np.log(value)
+
+def exponent(value):    # e^0 = 1
+    return np.exp(value)
+
+def power(base, exp):
+    return np.power(base, exp)
+
+
+print(log(8))
+print(exponent(0))
+print(power(2, 5))
