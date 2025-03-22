@@ -86,3 +86,92 @@ matrix2 = np.array([[2,3,4],
                    [3,7,9]])
 
 print(matrix_multiply(matrix, matrix2))
+
+
+# Step 6: User Input and Menu for Calculator
+# Menu and Input Handling¶
+
+import numpy as np
+
+def main_menu():
+    print("\nhi... this is a numpy scientific calculation")
+    print("1. Basic operations (+,-,*,/)")
+    print("2. trignometric operations (sin, cos, tan)")
+    print("3. logrithmic, exponent (log, exp, power)")
+    print("4. matrix operations")
+    print("5. Exit\n")
+
+
+while True: 
+    main_menu()
+
+    choose = int(input("Enter your number from (1-5)"))
+
+    if choose == 1:
+        num1 = int(input("Enter your first number : "))
+        num2 = int(input("Enter your second number : "))
+        oprtor = input("Enter your operator : ")
+
+        if oprtor == '+':
+            print(np.add(num1, num2))
+        elif oprtor == '-':
+            print(np.subtract(num1, num2))
+        elif oprtor == '*':
+            print(np.multiply(num1, num2))
+        elif oprtor == '/':
+            try:
+                 print(np.divide(num1, num2))
+            except ZeroDivisionError:
+                print("Error ! Division by zero")
+        else:
+            print("Invalid operator")
+
+    elif choose == 2:
+        sign = input("Enter your sign value : ")
+        angle = int(input("Enter your angle : "))
+
+        if sign == 'sin':
+            print(np.sin(np.radians(angle)))
+        elif sign == 'cos':
+            print(np.cos(np.radians(angle)))
+        elif sign == 'tan':
+            print(np.tan(np.radians(angle)))
+        else :
+            print("Invalid sign value")
+
+    elif choose == 3:
+        var = input("Enter your log or exp or power : ")
+        val = int(input("Enter your value : "))
+
+        if var == 'log':
+            print( np.log10(val))
+        elif var == 'exp':
+            print( np.exp(val))
+        elif var == 'power':
+            base = int(input("Enter your base value : "))
+            print( np.power(base, val))
+        else :
+            print( "Invalid input")
+    
+    elif choose == 4: 
+        matrix1 = np.array([[int(input("Enter your matrix 1 elements [[]] : ".format(i, j))) for j in range(2)] for i in range(2)])
+        mat_op = input("Enter your matrix operation (add, multipy, transpose, determenent) : ")
+
+        if mat_op == 'add':
+            matrix2 = np.array([[int(input("Enter your matrix 2 elements [[]] : ".format(i, j))) for j in range(2)] for i in range(2)])
+            print( np.add(matrix1, matrix2))
+        elif mat_op == 'multiple':
+            matrix2 = np.array([[int(input("Enter your matrix 2 elements [[]] : ".format(i, j))) for j in range(2)] for i in range(2)])
+            print( np.dot(matrix1, matrix2))
+        elif mat_op == 'transpose':
+            print( np.transpose(matrix1))
+        elif mat_op == 'determenet':
+            print( np.linalg.det(matrix1))
+        else:
+            print( "Invalid matrix operation")
+
+    elif choose == 5:
+        print("bye bye")
+        break
+    else:
+         print("enter your valid number okay bro..")
