@@ -23,3 +23,19 @@ def divide(a, b):
 print("addition : ",add(3, 6))
 print("dividtion : ",divide(3, 2))
 print("multiply : ",multiply(5, 9))
+
+# Step 3. Trignometric operations
+# Functions like sin, cos , tan
+
+def sin(angle):
+    return np.sin(np.radians(angle))
+
+def cos(angle):
+    return np.cos(np.radians(angle))
+
+def tan(angle):
+    return np.tan(np.radians(angle))
+
+print(sin(90))
+print(tan(45))
+print(cos(90))
