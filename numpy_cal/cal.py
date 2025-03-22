@@ -56,3 +56,33 @@ def power(base, exp):
 print(log(8))
 print(exponent(0))
 print(power(2, 5))
+
+
+# Step 5: Matrix Operations
+# Matrix Addition, Multiplication, Transpose, and Determinant¶
+
+def matrix_add(matrix1, matrix2):
+    return np.add(matrix1, matrix2)
+
+def matrix_multiply(matrix1, matrix2):
+    return np.dot(matrix1, matrix2)
+
+def matrix_transpose(matrix1):
+    return np.transpose(matrix)
+
+def matrix_determinent(matrix):
+    return np.linalg.det(matrix)
+    
+# simple matrix 3x3
+matrix = np.matrix([[1,2,3],
+                    [2,3,5],
+                    [2,6,4]])
+
+print(matrix_determinent(matrix))
+print(matrix_transpose(matrix))
+
+matrix2 = np.array([[2,3,4],
+                   [6,5,4],
+                   [3,7,9]])
+
+print(matrix_multiply(matrix, matrix2))
